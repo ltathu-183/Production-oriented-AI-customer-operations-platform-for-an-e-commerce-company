@@ -1,0 +1,74 @@
+﻿# FILE: Major_Assignment_Report_Project 1_2026.docx
+# PARAGRAPHS: 52 TABLES: 1 SECTIONS: 2
+
+[P1 style='Normal'] NATIONAL ECONOMICS UNIVERSITY
+
+[P2 style='Normal'] FACULTY OF MATHEMATICAL ECONOMICS
+
+[P4 style='Normal'] MAJOR ASSIGNMENT
+
+[P5 style='Normal'] Course: Deep Learning
+
+[P6 style='Normal'] TOPIC:
+
+[P8 style='Normal'] Instructor:
+
+[P9 style='Normal'] Students:
+
+[P16 style='Normal'] Hanoi, October 2026
+
+[P17 style='Normal'] Part 1: Theory
+
+[P18 style='Normal'] Present the theoretical background of Convolutional Neural Networks (CNNs).
+
+[P19 style='Normal'] Part 2: Practical Application
+
+[P20 style='Normal'] I. Problem Description
+
+[P21 style='List Paragraph'] Title:
+
+[P22 style='List Paragraph'] Research objectives:
+
+[P23 style='List Paragraph'] Input of the problem:
+
+[P24 style='List Paragraph'] Output of the problem:
+
+[P25 style='List Paragraph'] Provide a summary of the tasks performed for this problem.
+
+[P27 style='Normal'] II. Dataset Description
+
+[P28 style='List Paragraph'] Provide the download link for the dataset.
+
+[P29 style='List Paragraph'] Describe the dataset: The number of images in the dataset, the types of objects included in the images (such as vehicles, animals, medical images, etc.), and the size of each image.
+
+[P31 style='Normal'] III. CNN Model Design
+
+[P32 style='List Paragraph'] Preprocess the data: clean, normalize, and augment the data.
+
+[P33 style='List Paragraph'] Split the dataset into three subsets and specify the number of samples in each:
+- Training data (used to train the model)
+- Validation data (used to tune and verify the model)
+- Test data (used to evaluate the model).
+
+[P35 style='List Paragraph'] Design your own simple CNN model using convolutional, pooling, and fully connected layers to solve the given problem. Present and illustrate the architecture of your proposed CNN model. Example:
+
+[P37 style='List Paragraph'] Design your own complex CNN model using CNN blocks,  convolutional, pooling, and fully connected layers to solve the given problem. Present and illustrate the architecture of your proposed CNN model. Example:
+
+[P41 style='List Paragraph'] Design a CNN model using Learning/Fine-Tuning to perform the given task. Present and illustrate the architecture of the proposed model. Example:
+
+[P46 style='Normal'] IV. Experimental Results
+
+[P47 style='Normal'] Evaluate the performance of the  models on the test set. For example,
+
+[T48 rows=3 cols=5]
+  R1: Model | Accuracy | Precision | Recall | F1-score
+  R2: CNN |  |  |  | 
+  R3: CNN+Aug+Trans |  |  |  | 
+
+[P50 style='Normal'] V. Conclusion
+
+[P51 style='Normal'] Summarize the main results achieved by the team.
+
+[P52 style='Normal'] References
+
+[P53 style='Normal'] List all references used in the report.

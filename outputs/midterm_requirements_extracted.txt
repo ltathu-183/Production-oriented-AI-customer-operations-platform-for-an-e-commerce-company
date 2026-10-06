@@ -1,0 +1,16 @@
+﻿# FILE: Midterm Requirements _Project 1_2026.docx
+# PARAGRAPHS: 7 TABLES: 0 SECTIONS: 1
+
+[P1 style='Normal'] Midterm Requirements
+
+[P2 style='Normal'] The class is divided into groups, with each group consisting of four students. Each group selects an image dataset, and the datasets must be different across groups. Using the selected dataset, each group performs either a classification or segmentation problem as follows:
+
+[P3 style='List Paragraph'] Preprocess the data: clean, normalize, and augment the data.
+
+[P4 style='List Paragraph'] Design your own simple CNN model using convolutional, pooling, and fully connected layers to solve the given problem.
+
+[P5 style='List Paragraph'] Design your own complex CNN model using CNN blocks,  convolutional, pooling, and fully connected layers to solve the given problem.
+
+[P6 style='List Paragraph'] Design a CNN model using Transfer Learning/Fine-Tuning to perform the given task.
+
+[P7 style='List Paragraph'] Evaluate the models using appropriate performance metrics.

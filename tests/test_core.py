@@ -1,10 +1,12 @@
+import sys
 import unittest
-
+from pathlib import Path
 import torch
 
-from models import MiniUNet, SimpleSegNet
-from utils import confusion_counts, metrics_from_counts
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from models import MiniUNet, SimpleSegNet  # noqa: E402
+from utils import confusion_counts, metrics_from_counts  # noqa: E402
 
 class MetricsTests(unittest.TestCase):
     def test_metrics_match_known_confusion_matrix(self):

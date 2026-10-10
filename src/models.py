@@ -3,7 +3,7 @@
 # 1) Simple CNN: encoder-decoder cơ bản
 # 2) Mini U-Net: thêm skip connection
 # 3) DeepLabV3-MobileNetV3: transfer learning / fine-tuning
-
+ 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -16,7 +16,7 @@ from config import NUM_CLASSES
 
 
 class ConvBlock(nn.Module):
-    """Hai phép Conv + ReLU. Không BatchNorm để giữ code dễ hiểu."""
+    """Hai phép Conv + ReLU"""
 
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -62,6 +62,23 @@ class SimpleSegNet(nn.Module):
         return self.out(x)
 
 
+class ConvBlock2(nn.Module):
+    """Hai phép Conv + ReLU + BatchNorm."""
+
+    def __init__(self, in_channels, out_channels):
+        super().__init__()
+        self.block = nn.Sequential(
+            nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+        )
+
+    def forward(self, x):
+        return self.block(x)
+
 class MiniUNet(nn.Module):
     """Complex NN vừa đủ: cùng độ sâu với SimpleSegNet nhưng có skip connection."""
 
@@ -69,14 +86,14 @@ class MiniUNet(nn.Module):
         super().__init__()
         self.pool = nn.MaxPool2d(2)
 
-        self.enc1 = ConvBlock(3, 16)
-        self.enc2 = ConvBlock(16, 32)
-        self.bottleneck = ConvBlock(32, 64)
+        self.enc1 = ConvBlock2(3, 16)
+        self.enc2 = ConvBlock2(16, 32)
+        self.bottleneck = ConvBlock2(32, 64)
 
         # Sau concat: 64 + 32 = 96 channels.
-        self.dec2 = ConvBlock(64 + 32, 32)
+        self.dec2 = ConvBlock2(64 + 32, 32)
         # Sau concat: 32 + 16 = 48 channels.
-        self.dec1 = ConvBlock(32 + 16, 16)
+        self.dec1 = ConvBlock2(32 + 16, 16)
 
         self.out = nn.Conv2d(16, num_classes, kernel_size=1)
 

@@ -27,6 +27,6 @@ LR_HEAD = 1e-3
 LR_FINETUNE = 1e-4
 
 # Resolve project data independently of the caller's current working directory.
-PROJECT_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
 OUTPUT_DIR = PROJECT_DIR / "outputs"

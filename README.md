@@ -42,7 +42,8 @@ project-root/
 │   ├── train.py			 # script chạy training
 │   ├── evaluate.py			 # script chạy evaluating
 │   ├── demo.py
-│   └── inspect_data.py
+│   ├── inspect_data.py
+│   └──visualize_predictions.py
 ├── tests/
 │   └── test_core.py		 # test công thức metrics, test model shape, ...
 ├── docs/                    # ghi chú markdown phụ
@@ -60,8 +61,6 @@ project-root/
 ├── requirements.txt
 └── README.md
 ```
-
-
 
 ---
 
@@ -184,6 +183,18 @@ outputs/results/demo_comparison.png
 ```
 
 ---
+
+### 8. Tạo ảnh demo
+
+```Python
+python src\visualize_predictions.py --num-samples 10
+```
+
+kết quả lưu tại:
+
+```
+outputs\results\examples\compare_test.png
+```
 
 ## Hyperparameters
 
